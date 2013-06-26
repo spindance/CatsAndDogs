@@ -1,0 +1,2 @@
+object @cat
+attributes :name
