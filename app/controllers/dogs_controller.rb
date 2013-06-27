@@ -1,4 +1,6 @@
 class DogsController < ApplicationController
+  java_import com.spindance.jcatsanddogs.services.DogService
+
   filter_access_to :all, :attribute_check => true, :context => :dogs, :load_method => :find_dog
 
   def show
@@ -7,7 +9,12 @@ class DogsController < ApplicationController
   private
 
   def find_dog
-    @dog = Java::Dog.new(params[:id].to_i)
+    service = DogService.new
+    begin
+      @dog = service.dog(params[:id].to_i)
+    ensure
+      service.close()
+    end
   end
 
 end
