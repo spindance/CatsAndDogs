@@ -17,3 +17,5 @@
 # Compiled Java
 *.class
 *.jar
+
+*.sublime-*
