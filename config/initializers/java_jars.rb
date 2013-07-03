@@ -1,5 +1,5 @@
 require 'java'
-require 'vendor/jars/mysql-connector-java-5.0.8-bin.jar'
-require 'vendor/jars/mybatis-3.2.2.jar'
-require 'vendor/jars/sal.jar'
-require 'vendor/jars/oval-1.82.jar'
+
+Dir[File.expand_path("vendor/jars/*.jar", Rails.root)].each do |file|
+  require file
+end
