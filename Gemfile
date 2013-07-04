@@ -9,6 +9,8 @@ gem 'rails', '3.2.13'
 gem 'jruby-openssl'
 gem 'rabl'
 gem 'declarative_authorization'
+gem 'puma'
+gem 'ruby_parser'
 
 
 

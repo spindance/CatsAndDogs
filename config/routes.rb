@@ -1,6 +1,7 @@
 Jrails::Application.routes.draw do
   resources :cats
   resources :dogs
+  resources :cows
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
