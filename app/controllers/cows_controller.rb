@@ -8,35 +8,27 @@ class CowsController < ApplicationController
 
   def update
     @cow.name = params[:name]
-    service = CowService.new
-    begin
-      if service.update_cow(@cow)
-        respond_to do |format|
-          format.json do
-            render
-          end
-        end
-      else
-        respond_to do |format|
-          format.json do
-            render :status => :unprocessable_entity
-          end
+    @service ||= CowService.new
+    if @service.update_cow(@cow)
+      respond_to do |format|
+        format.json do
+          render
         end
       end
-    ensure
-      service.close()
+    else
+      respond_to do |format|
+        format.json do
+          render :status => :unprocessable_entity
+        end
+      end
     end
   end
 
   private
 
   def find_cow
-    service = CowService.new
-    begin
-      @cow = service.cow(params[:id].to_i)
-    ensure
-      service.close()
-    end
+    @service ||= CowService.new
+    @cow = @service.cow(params[:id].to_i)
   end
 
 end

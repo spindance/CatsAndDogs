@@ -8,35 +8,27 @@ class DogsController < ApplicationController
 
   def update
     @dog.name = params[:name]
-    service = DogService.new
-    begin
-      if service.update_dog(@dog)
-        respond_to do |format|
-          format.json do
-            render
-          end
-        end
-      else
-        respond_to do |format|
-          format.json do
-            render :status => :unprocessable_entity
-          end
+    @service ||= DogService.new
+    if @service.updateDog(@dog)
+      respond_to do |format|
+        format.json do
+          render
         end
       end
-    ensure
-      service.close()
+    else
+      respond_to do |format|
+        format.json do
+          render :status => :unprocessable_entity
+        end
+      end
     end
   end
 
   private
 
   def find_dog
-    service = DogService.new
-    begin
-      @dog = service.dog(params[:id].to_i)
-    ensure
-      service.close()
-    end
+    @service ||= DogService.new
+    @dog = @service.getDog(params[:id].to_i)
   end
 
 end
