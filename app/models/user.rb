@@ -7,7 +7,11 @@ class User
   end
 
   def role_symbols
-    [:user]
+    roles = [:user]
+    if @id.eql?(2)
+      roles = [:administrator]
+    end
+    roles
   end
 
 end

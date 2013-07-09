@@ -4,4 +4,7 @@ authorization do
       if_attribute :user_id => is { user.id }
     end
   end
+  role :administrator do
+    has_permission_on [:cats, :dogs, :cows], :to => [:show, :update]
+  end
 end
