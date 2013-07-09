@@ -1,0 +1,2 @@
+object @cow
+attributes :name
