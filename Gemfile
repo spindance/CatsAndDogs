@@ -10,7 +10,12 @@ gem 'jruby-openssl'
 gem 'rabl'
 gem 'declarative_authorization'
 
-
+group :test do
+  gem 'minitest', '4.7.5'
+  gem 'minitest-spec-rails', '4.7.4'
+  gem 'mocha', '0.14.0', :require => 'mocha/setup'
+  gem 'simplecov', '0.7.1'
+end
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
