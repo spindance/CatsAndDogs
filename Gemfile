@@ -10,6 +10,7 @@ gem 'jruby-openssl'
 gem 'rabl'
 gem 'declarative_authorization'
 gem 'puma'
+gem 'ruby_parser'
 
 gem 'batch_api', '0.2.1'
 

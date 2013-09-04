@@ -7,13 +7,14 @@ This is a quick-and-dirty example of how to use Plain Old Java Objects (POJOs) a
 
 No login required, but your cat and dog have IDs of 1.  Other IDs will give an auth error.
 
-`Dog.java` needs to be compiled with `javac lib/java_models/Dog.java`.
+To access cats and dogs with other IDs as an administrator, add the param user_id=2 to your url, such as [http://localhost:3000/dogs/2.json?user_id=2](http://localhost:3000/dogs/2.json?user_id=2).  Other user IDs other than 2 will throw an authorization error, with the exception of user_id = 1 for objects with id of 1.
+
+`Dog.java` needs to be compiled with sbt in JCatsAndDogs.
 
 Files of interest:
 
  * config/initializers/java_models.rb
  * config/authorization_rules.rb
- * lib/java_models/Dog.java
  * app/controllers/dogs_controller.rb
  * app/views/dogs/show.json.rabl
 

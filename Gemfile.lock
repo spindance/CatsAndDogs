@@ -88,6 +88,9 @@ GEM
       multi_json (~> 1.0)
       simplecov-html (~> 0.7.1)
     simplecov-html (0.7.1)
+    ruby_parser (3.2.0)
+      sexp_processor (~> 4.1)
+    sexp_processor (4.2.1)
     sprockets (2.2.2)
       hike (~> 1.2)
       multi_json (~> 1.0)
@@ -107,6 +110,7 @@ DEPENDENCIES
   batch_api (= 0.2.1)
   declarative_authorization
   jruby-openssl
+<<<<<<< HEAD
   minitest (= 4.7.5)
   minitest-spec-rails (= 4.7.4)
   mocha (= 0.14.0)
@@ -114,3 +118,9 @@ DEPENDENCIES
   rabl
   rails (= 3.2.13)
   simplecov (= 0.7.1)
+=======
+  puma
+  rabl
+  rails (= 3.2.13)
+  ruby_parser
+>>>>>>> mybatis
