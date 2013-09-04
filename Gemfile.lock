@@ -110,7 +110,6 @@ DEPENDENCIES
   batch_api (= 0.2.1)
   declarative_authorization
   jruby-openssl
-<<<<<<< HEAD
   minitest (= 4.7.5)
   minitest-spec-rails (= 4.7.4)
   mocha (= 0.14.0)
@@ -118,9 +117,4 @@ DEPENDENCIES
   rabl
   rails (= 3.2.13)
   simplecov (= 0.7.1)
-=======
-  puma
-  rabl
-  rails (= 3.2.13)
   ruby_parser
->>>>>>> mybatis
