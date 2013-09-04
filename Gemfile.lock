@@ -84,13 +84,13 @@ GEM
     rake (10.1.0)
     rdoc (3.12.2)
       json (~> 1.4)
+    ruby_parser (3.2.0)
+      sexp_processor (~> 4.1)
+    sexp_processor (4.2.1)
     simplecov (0.7.1)
       multi_json (~> 1.0)
       simplecov-html (~> 0.7.1)
     simplecov-html (0.7.1)
-    ruby_parser (3.2.0)
-      sexp_processor (~> 4.1)
-    sexp_processor (4.2.1)
     sprockets (2.2.2)
       hike (~> 1.2)
       multi_json (~> 1.0)
@@ -116,5 +116,5 @@ DEPENDENCIES
   puma
   rabl
   rails (= 3.2.13)
-  simplecov (= 0.7.1)
   ruby_parser
+  simplecov (= 0.7.1)
