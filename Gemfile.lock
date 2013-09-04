@@ -29,6 +29,8 @@ GEM
       i18n (= 0.6.1)
       multi_json (~> 1.0)
     arel (3.0.2)
+    batch_api (0.2.1)
+      middleware
     bouncy-castle-java (1.5.0147)
     builder (3.0.4)
     declarative_authorization (0.5.7)
@@ -43,6 +45,7 @@ GEM
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
     metaclass (0.0.1)
+    middleware (0.1.0)
     mime-types (1.23)
     minitest (4.7.5)
     minitest-spec-rails (4.7.4)
@@ -52,6 +55,8 @@ GEM
       metaclass (~> 0.0.1)
     multi_json (1.7.7)
     polyglot (0.3.3)
+    puma (2.2.2-java)
+      rack (>= 1.1, < 2.0)
     rabl (0.8.5)
       activesupport (>= 2.3.14)
     rack (1.4.5)
@@ -99,11 +104,13 @@ PLATFORMS
   java
 
 DEPENDENCIES
+  batch_api (= 0.2.1)
   declarative_authorization
   jruby-openssl
   minitest (= 4.7.5)
   minitest-spec-rails (= 4.7.4)
   mocha (= 0.14.0)
+  puma
   rabl
   rails (= 3.2.13)
   simplecov (= 0.7.1)

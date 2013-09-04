@@ -59,5 +59,14 @@ module Jrails
     # parameters by using an attr_accessible or attr_protected declaration.
     # config.active_record.whitelist_attributes = true
 
+    config.middleware.use BatchApi::RackMiddleware do |batch_config|
+      batch_config.endpoint = "/batchapi" # default /batch
+
+      # default middleware stack run for each batch request
+      batch_config.batch_middleware = Proc.new { }
+      # default middleware stack run for each individual operation
+      batch_config.operation_middleware = Proc.new { }
+    end
+
   end
 end

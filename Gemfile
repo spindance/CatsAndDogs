@@ -9,6 +9,9 @@ gem 'rails', '3.2.13'
 gem 'jruby-openssl'
 gem 'rabl'
 gem 'declarative_authorization'
+gem 'puma'
+
+gem 'batch_api', '0.2.1'
 
 group :test do
   gem 'minitest', '4.7.5'
