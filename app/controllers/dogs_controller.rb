@@ -3,6 +3,9 @@ class DogsController < ApplicationController
 
   filter_access_to :all, :attribute_check => true, :context => :dogs, :load_method => :find_dog
 
+  def index
+  end
+
   def show
   end
 
@@ -29,9 +32,11 @@ class DogsController < ApplicationController
 
   def find_dog
     with_service(DogService) do |s|
-      @dog = s.getDog(params[:id].to_i)
-      @dog = s.getDog(params[:id].to_i)
-      @dog = s.getDog(params[:id].to_i)
+      if params[:id].blank?
+        @dogs = s.getDogs()
+      else
+        @dog = s.getDog(params[:id].to_i)
+      end
     end
   end
 

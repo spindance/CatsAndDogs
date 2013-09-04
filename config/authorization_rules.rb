@@ -5,6 +5,6 @@ authorization do
     end
   end
   role :administrator do
-    has_permission_on [:cats, :dogs, :cows], :to => [:show, :update]
+    has_permission_on [:cats, :dogs, :cows], :to => [:index, :show, :update]
   end
 end
